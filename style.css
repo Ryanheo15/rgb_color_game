@@ -1,0 +1,151 @@
+/* ------------ GENERAL ----------- */
+* {
+  margin:0;
+  padding:0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ------------ INDEX ----------- */
+
+.index_main {
+  height:100vh;
+  background:url("https://images.hdqwalls.com/download/triangles-colorful-background-nz-2560x1700.jpg");
+  background-position:center;
+  background-attachment:fixed;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.index_main .main_title{
+  position:absolute;
+  top:45%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.index_main .play_btn {
+  position:absolute;
+  top:55%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.arrow-transition {
+  position:absolute;
+  top:95%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:64px;
+  animation: jump 1.2s infinite;
+}
+
+.arrow-transition:hover {
+  color:#0275d8;
+}
+
+@keyframes jump {
+  0% { transform: translate(-50%, -100%) scale(1.25, 0.75); }
+    50% { transform: translate(-50%, -150%) scale(1, 1); }
+    55% { transform: translate(-50%, -150%) rotate(15deg); }
+    60% { transform: translate(-50%, -150%) rotate(-15deg); }
+    65% { transform: translate(-50%, -150%) rotate(15deg); }
+    70% { transform: translate(-50%, -150%) rotate(-15deg); }
+    100% { transform: translate(-50%, -100%) scale(1.25, 0.75); }
+}
+
+/* ------------ PlAY ----------- */
+
+#game_play .color_display {
+  padding:75px !important;
+  background-color:white;
+}
+
+.menu {
+  height:60px;
+}
+
+.instructions {
+  background-color:#f7f8fd;
+  background-color:#85C1E9;
+}
+
+.box {
+  width:200px;
+  background-color:red;
+  height:200px;
+  border-radius:20px;
+}
+
+.selected {
+  border:5px solid white;
+}
+
+/* Modal */
+#game_over {
+  position:relative;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-88%);
+}
+
+/* MEDIA QUERIES */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  /* Main page */
+  .index_main .main_title {
+    position:absolute;
+    text-align:center;
+    top:45%;
+    transform:translate(-50%,-50%);
+  }
+  .index_main .play_btn {
+    position:absolute;
+    top:65%;
+    left:50%;
+    transform:translate(-50%,-50%);
+  }
+
+  /* game play */
+  #game_play .color-display {
+    width:100% !important;
+  }
+  #game_play .rgb_title {
+    width:100% !important;
+    margin:0;
+    padding:0;
+  }
+
+  #game_play .game_content {
+    padding-top:20px !important;
+  }
+
+  #game_play .lives {
+    text-align:center !important;
+    margin: auto !important;
+  }
+
+  #game_play .row {
+    margin-top:0 !important;
+  }
+
+  #game_play .box {
+    width:90% !important;
+    background-color:red;
+    height:200px;
+    border-radius:20px;
+    margin-top:25px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {}
